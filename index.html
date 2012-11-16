@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>ZMQ 4 TEH W1N!!!123</title>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="http://zeptojs.com/zepto.min.js"></script>
+	</head>
+	<body>
+		<h1>0MQ Output as received from Socket.IO</h1>
+		<ul id="results">
+		</ul>
+	</body>		
+		<script>
+			var socket = io.connect('http://localhost');
+			socket.on('zmq-msg', function (data) {
+				console.log(data);
+				$('ul').append('<li>'+data+'</li>')
+			});
+		</script>
+
+</html>

@@ -1,0 +1,11 @@
+{
+	"name": "leap.io",
+	"version": "0.0.1",
+	"description": "Leap to WebSockets: A ZeroMQ bridge to Socket.IO.",
+	"dependencies": {
+		"coffee-script": "",
+		"socket.io": "",
+		"express": "",
+		"zmq": ""
+	}
+}
