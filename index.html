@@ -6,14 +6,15 @@
 	</head>
 	<body>
 		<h1>0MQ Output as received from Socket.IO</h1>
-		<ul id="results">
-		</ul>
-	</body>		
+		<div id="results">
+		</div>
+	</body>
 		<script>
 			var socket = io.connect('http://localhost');
-			socket.on('zmq-msg', function (data) {
+			socket.on('leap-frame', function (data) {
 				console.log(data);
-				$('ul').append('<li>'+data+'</li>')
+				var json = JSON.parse(data);
+				$('#results').html(json.message);
 			});
 		</script>
 
