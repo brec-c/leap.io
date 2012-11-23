@@ -11,4 +11,4 @@ console.log "Producer bound to 0MQ"
 setInterval (->
 	console.log 'sending...'
 	sock.send "testing: #{new Date}"
-), 500
+), 5

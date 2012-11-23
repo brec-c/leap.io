@@ -28,6 +28,6 @@ sock.on 'message', (msg) ->
 	console.log typeof msg
 
 	if numConnections > 0
-		io.sockets.emit 'zmq-msg', String(msg)
+		io.sockets.emit 'leap-frame', String(msg)
 	else
 		console.log 'not writing to websocket b/c no one listening'
